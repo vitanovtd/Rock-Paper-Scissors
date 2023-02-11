@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+  }
+
+
+body {
+    font-family: "Rubik", "Inter";
+    background-color: bisque;
+    line-height: 1;
+    font-weight: 400;
+    
+}
+
+
+.container {
+    max-width: 120rem;
+    max-height: 100vh;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    padding: 4rem;
+   
+}
+
+.buttons img {
+    max-width: 15rem;
+    padding: 3rem;
+    background: transparent;
+}
+
+.buttons button :hover {
+    border-color:aquamarine;
+}
+
+.title {
+    font-weight: 500;
+    text-align: center;
+    font-size: 6rem;
+    padding: 4rem;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    padding: 5rem;
+}
+
+.scores p {
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+footer{
+    background-color: darksalmon;
+    text-align: center;
+    padding: 2rem;
+    color:white;
+    margin: 0;
+}
+
+.result {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+.rules {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+.rock .paper .scissors {
+    display: flex;
+}
+
+
+
