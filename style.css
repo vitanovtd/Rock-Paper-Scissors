@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 
@@ -16,7 +17,8 @@ html {
 
 body {
     font-family: "Rubik", "Inter";
-    background-color: bisque;
+    
+    background-color: #ffe4c4;
     line-height: 1;
     font-weight: 400;
     
@@ -26,6 +28,7 @@ body {
 .container {
     max-width: 120rem;
     max-height: 100vh;
+    color: #010203;
     padding: 0 4rem;
     margin: 0 auto;
     margin-bottom: 24.6rem;
