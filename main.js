@@ -39,11 +39,69 @@ function resetGame() {
 }
 
 
+function playRound() {
+    let computerChoice = getComputerChoice();
+
+    if (playerChoice === computerChoice) {
+        res = "DRAW!";
+    }
+
+    if (playerChoice === "rock" && computerChoice === "paper") {
+        computerScore += 1;
+        res = "Computer wins this round!";
+    }
+
+    if (playerChoice === "paper" && computerChoice === "scissors") {
+        computerScore += 1;
+        res = "Computer wins this round!";
+    }
+
+    if (playerChoice === "scissors" && computerChoice === "rock") {
+        computerScore += 1;
+
+    }
+
+    if (playerChoice === "paper" && computerChoice === "rock") {
+        playerScore += 1;
+        res = "You won this round!";
+    }
+
+    if (playerChoice === "rock" && computerChoice === "scissors") {
+        playerScore += 1;
+        res = "You won this round!";
+    }
+
+    if (playerChoice === "scissors" && computerChoice === "paper") {
+        playerScore += 1;
+        res = "You won this round!";
+    }
+
+    result.textContent = `Result: ${res}`;
+    result.classList.add("result");
+    container.appendChild(result);
+    rounds++;
+    computerDisplay[0].textContent = `Computer score: ${computerScore}`;
+    playerDisplay[0].textContent = `Player score: ${playerScore}`;
 
 
-function playRound(playerSelection, computerSelection) {
+
+
+
+    if (rounds === 5) {
+        declareWinner();
+        playerScore = 0;
+        computerScore = 0;
+        addPlayAgain();
+    }
+
+    if (rounds >= 5) {
+        resetGame();
+    }
+
 
 }
+
+
 
 
 
