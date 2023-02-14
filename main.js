@@ -1,12 +1,35 @@
-
+let playerChoice = "";
+let computerChoice = "";
+let playerScore = 0;
+let computerScore = 0;
 let rounds = 0;
+let res = "";
 
-const computerDisplay = document.querySelector('.computer-score');
-const playerDisplay = document.querySelector('.player-score');
+
+
+
+const container = document.querySelector('.container');
+const rockbtn = document.getElementsByClassName("rock");
+const rocksbtn = document.getElementById("rock");
+const rocksbtn1 = document.getElementById('rock');
+const paperbtn = document.getElementsByClassName("paper");
+const scissorsbtn = document.getElementsByClassName("scissors");
+const result = document.createElement('p');
+const computerDisplay = document.getElementsByClassName("computer-score");
+const playerDisplay = document.getElementsByClassName("player-score");
+// const computerDisplay = document.querySelector('.computer-score');
+// const playerDisplay = document.querySelector('.player-score');
+
+
+
+
+
+
+
 
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors']
-    return choices[Math.flor(Math.random() * choices.length)]
+    return choices[Math.floor(Math.random() * choices.length)]
 }
 
 
@@ -41,7 +64,7 @@ function resetGame() {
 
 function playRound() {
     let computerChoice = getComputerChoice();
-
+    console.log(computerChoice)
     if (playerChoice === computerChoice) {
         res = "DRAW!";
     }
@@ -94,12 +117,41 @@ function playRound() {
         addPlayAgain();
     }
 
-    if (rounds >= 5) {
+    if (rounds > 5) {
         resetGame();
     }
 
 
+
 }
+
+rocksbtn1.addEventListener('click', () => {
+
+    playerChoice = 'rock';
+    playRound();
+})
+
+
+paperbtn[0].addEventListener('click', () => {
+    playerChoice = 'paper';
+    playRound();
+});
+
+scissorsbtn[0].addEventListener('click', () => {
+    playerChoide = 'scissors'
+    playRound();
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
